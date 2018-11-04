@@ -37,7 +37,7 @@ RUN \
     && rm -rf shadowsocks-libev-$SS_VER \
     && apk del .build-deps
 
-ENV SS_PORT=8388 PASSWORD=value SS_METHOD=chacha20 SS_TIMEOUT=60
+ENV SS_PORT=8388 PASSWORD=value SS_METHOD=chacha20-ietf-poly1305 SS_TIMEOUT=60
 
 EXPOSE $SS_PORT/tcp $SS_PORT/udp
 

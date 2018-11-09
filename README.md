@@ -8,7 +8,7 @@ FSP Network Gen2 Server Infrastructure - SS libev
 
 ![Shadowsocks-libev](https://img.shields.io/badge/ss--libev-3.2.1-blue.svg?style=flat-square)
 
-A docker image for [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev) server
+A docker image for [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev) server with [simple-obfs](https://github.com/shadowsocks/simple-obfs) support
 
 ### Download from Docker Hub 
 
@@ -20,13 +20,9 @@ docker run -d --restart=always -e "SS_PORT=8388" -e "SS_PASSWORD=value" -e "SS_M
 ```
 
 ### Default configuration in environment variables
-
-    SS_PORT     8838
-    
-    SS_PASSWORD value
-    
-    SS_METHOD   chacha20-ietf-poly1305
-
-    SS_TIMEOUT  60
-
-based [shadowsocks-docker](https://github.com/hangim/shadowsocks-docker)
+| Environment | Default |
+| - | - |
+| SS_PORT | 8838 |
+| PASSWORD | value |
+| SS_METHOD | chacha20-ietf-poly1305 |
+| SS_TIMEOUT | 60 |

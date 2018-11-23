@@ -58,7 +58,7 @@ RUN set -ex && apk upgrade \
 ENV SS_PORT=8388 
 ENV PASSWORD=value 
 ENV SS_METHOD=chacha20-ietf-poly1305 
-ENV SS_TIMEOUT=60 
+ENV SS_TIMEOUT=3600 
 ENV DNS_ADDR=8.8.8.8,8.8.4.4 
 ENV PLUGIN=obfs-server 
 ENV PLUGIN_OPTS obfs=tls

@@ -55,13 +55,13 @@ RUN set -ex && apk upgrade \
         simple-obfs \
         /var/cache/apk/*
 
-ENV SS_PORT=8388 
+ENV SS_PORT=443 
 ENV PASSWORD=value 
 ENV SS_METHOD=chacha20-ietf-poly1305 
-ENV SS_TIMEOUT=3600 
+ENV SS_TIMEOUT=60 
 ENV DNS_ADDR=8.8.8.8,8.8.4.4 
 ENV PLUGIN=obfs-server 
-ENV PLUGIN_OPTS obfs=tls
+ENV PLUGIN_OPTS obfs=tls;fast-open;failover=0.0.0.0:8443
 
 EXPOSE $SS_PORT/tcp $SS_PORT/udp
 

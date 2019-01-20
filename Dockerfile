@@ -55,7 +55,7 @@ RUN set -ex && apk upgrade \
         simple-obfs \
         /var/cache/apk/*
 
-ENV SS_PORT=443 
+ENV SS_PORT=8388 
 ENV PASSWORD=value 
 ENV SS_METHOD=chacha20-ietf-poly1305 
 ENV SS_TIMEOUT=60 

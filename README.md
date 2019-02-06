@@ -1,4 +1,4 @@
-# Docker-SS
+# Shadowsocks libev
 
 FSP Network Gen2 Server Infrastructure - SSlibev
 
@@ -12,11 +12,11 @@ A docker image for [shadowsocks-libev](https://github.com/shadowsocks/shadowsock
 
 ### Download from Docker Hub 
 
-    docker pull fspnetwork/ss
+    docker pull registry.gitlab.com/fspnetwork/ss
 
 ### Usage
 ```sh
-docker run -d --restart=always -e "PASSWORD=value" -p 8388:8388 -p 8388:8388/udp --name ssserver fspnetwork/ss
+docker run -d --restart=always -e "PASSWORD=value" -p 8388:8388 -p 8388:8388/udp --name ssserver registry.gitlab.com/fspnetwork/ss
 ```
 
 ### Default configuration in environment variables

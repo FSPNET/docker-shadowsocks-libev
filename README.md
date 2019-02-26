@@ -6,7 +6,7 @@ FSP Network Gen2 Server Infrastructure - SSlibev
 ![Docker Build Status](https://img.shields.io/docker/build/fspnetwork/ss.svg?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/fspnet/docker-sslibev.svg?style=flat-square)
 
-![Shadowsocks-libev](https://img.shields.io/badge/ss--libev-3.2.3-blue.svg?style=flat-square)
+![Shadowsocks-libev](https://img.shields.io/badge/ss--libev-3.2.4-blue.svg?style=flat-square)
 
 A docker image for [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev) server with [simple-obfs](https://github.com/shadowsocks/simple-obfs) support
 

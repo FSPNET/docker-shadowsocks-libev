@@ -1,3 +1,18 @@
+FROM golang:alpine AS golang
+
+ENV V2RAY_PLUGIN_VERSION v1.2.0
+ENV GO111MODULE on
+
+# Build v2ray-plugin
+RUN apk add --no-cache git build-base \
+    && mkdir -p /go/src/github.com/shadowsocks \
+    && cd /go/src/github.com/shadowsocks \
+    && git clone https://github.com/shadowsocks/v2ray-plugin.git \
+    && cd v2ray-plugin \
+    && git checkout "$V2RAY_PLUGIN_VERSION" \
+    && go get -d \
+    && go build
+
 # Shadowsocks Server Dockerfile
 
 FROM alpine
@@ -54,6 +69,9 @@ RUN set -ex && apk upgrade \
         shadowsocks-libev-${SS_VER} \
         simple-obfs \
         /var/cache/apk/*
+
+# Copy v2ray-plugin
+COPY --from=golang /go/src/github.com/shadowsocks/v2ray-plugin/v2ray-plugin /usr/local/bin
 
 ENV SS_PORT 8388
 ENV PASSWORD ChangeMe!!!

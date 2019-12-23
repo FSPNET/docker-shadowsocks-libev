@@ -23,9 +23,9 @@ docker run -d --restart=always -e "PASSWORD=value" -p 8388:8388 -p 8388:8388/udp
 | Environment | Default |
 | - | - |
 | SS_PORT | 8388 |
-| PASSWORD | value |
+| PASSWORD | ChangeMe!!! |
 | SS_METHOD | chacha20-ietf-poly1305 |
 | SS_TIMEOUT | 60 |
-| DNS_ADDR | 8.8.8.8,8.8.4.4 |
+| DNS_ADDR | 1.1.1.1,1.0.0.1 |
 | PLUGIN | obfs-server |
 | PLUGIN_OPTS | obfs=tls;fast-open;failover=0.0.0.0:8443 |
